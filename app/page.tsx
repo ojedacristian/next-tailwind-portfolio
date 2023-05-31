@@ -1,11 +1,47 @@
-import { AirbnbIcon, GoogleIcon } from '@/components/icons'
+import { AirbnbIcon, Chevron, GoogleIcon } from '@/components/icons'
 import Image from 'next/image'
+import WorkCard from '../components/WorkCard';
+
+interface workCard {
+  title: string,
+  image: string,
+  desc: string,
+  category: string,
+  
+}
+
+const works: workCard[] = [
+  {
+    title: 'Real Estate Template',
+    image:'https://picsum.photos/600/500',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
+    category:'Website Design'
+  },
+  {
+    title: 'Plant Identification App',
+    image:'https://picsum.photos/600/500',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
+    category:'Mobile App'
+  },
+  {
+    title: 'Real Estate Template',
+    image:'https://picsum.photos/600/500',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
+    category:'Website Design'
+  },
+  {
+    title: 'Logo Animation',
+    image:'https://picsum.photos/600/500',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
+    category:'Animation'
+  } 
+]
 
 export default function Home() {
   return (
     <div className='bg-black min-h-screen'>
       <main
-        className="xl:container mx-auto">
+        className="xl:container mx-auto px-8">
         <section id='home' className='h-screen flex justify-between flex-col'>
           <header
             className='flex justify-between py-2'
@@ -25,9 +61,7 @@ export default function Home() {
             >I'm a designer specialising in <span className='font-medium text-white'>UI/UX</span> and <span className='font-medium text-white'>Interaction Design</span></h1>
           </div>
           <div className='mx-auto'>
-            <svg xmlns="http://www.w3.org/2000/svg" className='w-8 h-8' fill="none">
-              <path stroke="#E3E4E6" strokeLinecap="round" strokeLinejoin="round" stroke-width="2.67" d="m2 2 10 10L22 2" />
-            </svg>
+            <Chevron/>
           </div>
         </section>
         <section id='clients' className='py-24'>
@@ -42,20 +76,8 @@ export default function Home() {
           </div>
         </section>
         <section id='works'>
-          <h2 className='text-4xl font-light text-gray-400 pb-12'>Selected <b className='text-white'>Works</b></h2>
-          <article className='flex my-12'>
-            <figure>
-              <Image className='rounded-3xl' width={600} height={500} src="https://picsum.photos/600/500" alt="" />
-            </figure>
-            <div className='flex flex-col justify-end pl-8'>
-              <h3 className='uppercase'>Real Estate Template</h3>
-              <p>Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.</span></p>
-              <h4>Website Design</h4>
-              <button className='uppercase p-2 rounded-full w-40 border-2 text-gray-400 border-gray-400'>
-                View Work ▶️
-              </button>
-            </div>
-          </article>
+          <h2 className='text-4xl font-light text-gray-400'>Selected <b className='text-white'>Works</b></h2>
+          <WorkCard />
         </section>
       </main>
     </div>

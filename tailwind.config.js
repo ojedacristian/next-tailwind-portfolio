@@ -9,6 +9,10 @@ module.exports = {
     extend: {
       backgroundImage: {
       },
+      colors: {
+        'neutral-1': '#E3E4E6',
+        'neutral-2': 'rgba(227,228,230,0.55)'
+      }
     },
   },
   plugins: [],
