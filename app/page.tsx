@@ -1,5 +1,6 @@
 import { Chevron } from '@/components/icons'
 import { Clients, Works } from '../components/';
+import { DezignLogo } from '../components/icons';
 
 export default function Home() {
   return (
@@ -8,11 +9,11 @@ export default function Home() {
         className="xl:container mx-auto px-8">
         <section id='home' className='h-screen flex justify-between flex-col'>
           <header
-            className='flex justify-between py-2'
+            className='flex justify-between py-6'
           >
-            <h1>Logo </h1>
+            <DezignLogo />
             <nav
-              className='flex justify-between'
+              className='flex justify-between text-sm'
             >
               <button className='px-4 uppercase'>Home</button>
               <button className='px-4 uppercase'>Work</button>

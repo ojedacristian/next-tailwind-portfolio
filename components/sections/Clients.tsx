@@ -1,5 +1,4 @@
-import { AirbnbIcon, GoogleIcon, MicrosoftIcon} from '@/components/'
-import { FedexIcon } from '../icons';
+import { AirbnbIcon, GoogleIcon, MicrosoftIcon, FedexIcon} from '@/components/'
 
 export const Clients = ()=> {
     return (
