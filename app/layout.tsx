@@ -1,10 +1,10 @@
 import './globals.css'
 import { Inter, Work_Sans } from 'next/font/google'
 
-const workSans = Work_Sans({ 
+const workSans = Work_Sans({
   weight: ['300', '500'],
-  subsets:['latin']
- })
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Next Portfolio',
@@ -18,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={workSans.className}>{children}</body>
+      <body className={workSans.className}>
+        <main
+          className="xl:container mx-auto px-28 text-neutral-1">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
