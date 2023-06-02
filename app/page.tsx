@@ -1,7 +1,4 @@
-import { Chevron } from '@/components/icons'
-import { Clients, Works } from '../components/';
-import { DezignLogo } from '../components/icons';
-import { Home } from '../components/sections/Home';
+import { Home, Clients, Works, About } from '../components/';
 
 export default function App() {
   return (
@@ -9,6 +6,7 @@ export default function App() {
         <Home/>
         <Clients/>
         <Works/>
+        <About/>
     </>
   )
 }
