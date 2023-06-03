@@ -1,4 +1,4 @@
-import { Home, Clients, Works, About } from '../components/';
+import { Home, Clients, Works, About, Footer } from '../components/sections';
 
 export default function App() {
   return (
@@ -7,6 +7,7 @@ export default function App() {
         <Clients/>
         <Works/>
         <About/>
+        <Footer />
     </>
   )
 }

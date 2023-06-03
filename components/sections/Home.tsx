@@ -19,7 +19,7 @@ export const Home = () => {
             <div className='w-9/12 mx-auto'>
                 <h1
                     className='text-6xl font-light text-neutral-2 text-center leading-tight'
-                >I'm a designer specialising in <span className='font-medium text-neutral-1'>UI/UX</span> and <span className='font-medium text-neutral-1'>Interaction Design</span></h1>
+                >I&apos;m a designer specialising in <span className='font-medium text-neutral-1'>UI/UX</span> and <span className='font-medium text-neutral-1'>Interaction Design</span></h1>
             </div>
             <div className='mx-auto mb-10'>
                 <Chevron />
