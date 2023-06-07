@@ -17,7 +17,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({align, work }) => {
                             <h3 className='uppercase py-4 text-neutral-1 text-h5'>{ work.title }</h3>
                             <h3 className='text-h3 font-light leading-normal'>Lorem ipsum dolor sit amet, consectetur <b className='text-neutral-1'> adipiscing elit. Ultrices lorem non feugiat egestas amet.</b></h3>
                             <p className='my-6 font-light text-body'>{ work.category}</p>
-                            <button className='uppercase p-2 rounded-full w-40 border-2 text-neutral-1 border-neutral-2 text-h5 hover:bg-gradient-to-tl from-purple-600 to-pink-600'>
+                            <button className='uppercase p-2 rounded-full w-40 border-2 text-neutral-1 border-neutral-2 text-h5 hover:bg-gradient-to-tl from-purple-600 to-pink-600 transition hover:scale-110 hover:translate-x-3'>
                                 View Work
                             </button>
                         </div>

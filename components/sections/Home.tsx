@@ -12,11 +12,15 @@ export const Home = () => {
                     className='flex justify-between w-48'
                 >
                     <button
-                        className='uppercase hover:text-primary border-b-pink-400 hover:border-b-2'>
+                        className='uppercase text-pink-700 hover:text-pink-700 border-b-pink-700 hover:border-b-2'>
                         Home
                     </button>
-                    <button className='uppercase hover:text-primary border-b-pink-400 hover:border-b-2'>Work</button>
-                    <button className='uppercase hover:text-primary border-b-pink-400 hover:border-b-2'>About  </button>
+                    <button className='uppercase hover:text-pink-700 border-b-pink-700 hover:border-b-2'>
+                        <a href='#works'>
+                        Work
+                        </a>
+                    </button>
+                    <button className='uppercase hover:text-pink-700 border-b-pink-700 hover:border-b-2'>About  </button>
                 </nav>
             </header>
             <div>
