@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-gradient-to-tl from-black to-blackgr ${workSans.className}`}>
         <main
-          className="xl:container mx-auto px-8 text-neutral-1">
+          className="xl:container 2xl:px-40 mx-auto px-8 text-neutral-1">
           {children}
         </main>
       </body>
