@@ -30,7 +30,7 @@ const works: Work[] = [
 
 export const Works = () => {
     return (
-        <section id='works' className="pt-20">
+        <section id='works' className="md:pt-20">
           <h2 className='text-h2 font-light text-neutral-2'>Selected <b className='text-neutral-1'>Works</b></h2>
           {
             works.map( (work, i) => (
