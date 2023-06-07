@@ -8,12 +8,12 @@ interface WorkCardProps {
 
 export const WorkCard: React.FC<WorkCardProps> = ({align, work }) => {
     return (
-        <article className='flex flex-col md:flex-row my-14 lg:my-24 text-neutral-2 w-full'>
+        <article className='flex flex-col md:flex-row my-14 lg:my-24 text-neutral-2'>
             {
                 align % 2
                     ?
                     <>
-                        <div className='flex flex-col pb-8 text-right md:justify-end md:pr-8 md:pb-0 w-full'>
+                        <div className='flex flex-col pb-8 text-right md:justify-end md:pr-8 md:pb-0 '>
                             <h3 className='uppercase py-4 text-neutral-1 text-h5'>{ work.title }</h3>
                             <h3 className='text-h3 font-light leading-normal'>Lorem ipsum dolor sit amet, consectetur <b className='text-neutral-1'> adipiscing elit. Ultrices lorem non feugiat egestas amet.</b></h3>
                             <p className='my-6 font-light text-body'>{ work.category}</p>
@@ -26,7 +26,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({align, work }) => {
                     :
                     <>
                         <Image className='rounded-3xl' width={594} height={490} src={work.image} alt="" />
-                        <div className='flex flex-col md:justify-end md:pl-8 w-full'>
+                        <div className='flex flex-col md:justify-end md:pl-8'>
                             <h3 className='uppercase py-4 text-neutral-1 text-h5'>{ work.title }</h3>
                             <h3 className='text-h3 font-light leading-normal'>Lorem ipsum dolor sit amet, consectetur <b className='text-neutral-1'> adipiscing elit. Ultrices lorem non feugiat egestas amet.</b></h3>
                             <p className='my-6 font-light text-body'>{ work.category}</p>
@@ -36,7 +36,6 @@ export const WorkCard: React.FC<WorkCardProps> = ({align, work }) => {
                         </div>
                     </>
             }
-                <hr className="w-3/4 mx-auto border border-gray-800 mt-10 md:invisible" />
         </article>
     )
 }
