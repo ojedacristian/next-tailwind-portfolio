@@ -2,12 +2,12 @@ import Image from "next/image"
 
 export const About = () => {
     return (
-        <section id="about" className="h-screen flex items-center">
-            <article className="w-1/2">
-                <h2 className="uppercase text-2xl">A bit about me</h2>
-                <p className="text-neutral-2 text-2xl font-light leading-normal">
+        <section id="about" className="h-screen flex items-center py-24">
+            <article className="mr-8 w-1/2">
+                <h4 className="uppercase text-h4">A bit about me</h4>
+                <h3 className="text-neutral-2 text-h3 font-light leading-normal">
                     I am a UI/UX designer who is passionate about creating <b className="text-neutral-1">beautiful and joyful digital experiences. Besides design, I love music, games and travelling.</b>
-                </p>
+                </h3>
             </article>
             <div
                 className="w-1/2 grid grid-cols-2 grid-rows-4 gap-8"

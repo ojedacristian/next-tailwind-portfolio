@@ -1,5 +1,5 @@
 import './globals.css'
-import { Inter, Work_Sans } from 'next/font/google'
+import { Work_Sans } from 'next/font/google'
 
 const workSans = Work_Sans({
   weight: ['300', '500'],
@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={workSans.className}>
+      <body className={`bg-gradient-to-tl from-black to-blackgr ${workSans.className}`}>
         <main
-          className="xl:container mx-auto px-28 text-neutral-1">
+          className="xl:container mx-auto px-8 text-neutral-1">
           {children}
         </main>
       </body>

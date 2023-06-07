@@ -5,23 +5,26 @@ export const Home = () => {
     return (
         <section id='home' className='h-screen flex justify-between flex-col'>
             <header
-                className='flex justify-between py-6'
+                className='flex justify-between py-5 text-h5'
             >
                 <DezignLogo />
                 <nav
-                    className='flex justify-between text-sm'
+                    className='flex justify-between w-48'
                 >
-                    <button className='px-4 uppercase'>Home</button>
-                    <button className='px-4 uppercase'>Work</button>
-                    <button className='px-4 uppercase'>About  </button>
+                    <button
+                        className='uppercase hover:text-primary border-b-pink-400 hover:border-b-2'>
+                        Home
+                    </button>
+                    <button className='uppercase hover:text-primary border-b-pink-400 hover:border-b-2'>Work</button>
+                    <button className='uppercase hover:text-primary border-b-pink-400 hover:border-b-2'>About  </button>
                 </nav>
             </header>
-            <div className='w-9/12 mx-auto'>
+            <div>
                 <h1
-                    className='text-6xl font-light text-neutral-2 text-center leading-tight'
+                    className='text-h1 font-light text-neutral-2 text-center leading-tight'
                 >I&apos;m a designer specialising in <span className='font-medium text-neutral-1'>UI/UX</span> and <span className='font-medium text-neutral-1'>Interaction Design</span></h1>
             </div>
-            <div className='mx-auto mb-10'>
+            <div className='mx-auto mb-10 animate-bounce'>
                 <Chevron />
             </div>
         </section>
