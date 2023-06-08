@@ -1,6 +1,6 @@
 import { AirbnbIcon, GoogleIcon, MicrosoftIcon, FedexIcon } from '@/components/'
 
-export const Clients = () => {
+export const Clients: React.FC = () => {
   return (
     <section id='clients' className='pt-20 pb-32'>
       <div className='text-h2 font-light leading-snug text-neutral-2 text-center
@@ -13,7 +13,7 @@ export const Clients = () => {
         <div className='mx-auto'>
           <AirbnbIcon />
         </div>
-        <div className='mx-auto'>
+        <div className="mx-auto">
           <GoogleIcon />
         </div>
         <div className='mx-auto'>

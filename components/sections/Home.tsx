@@ -1,8 +1,8 @@
 import React from 'react'
 import { Chevron, DezignLogo } from '../icons'
 
-export const Home = () => {
-    return (
+export const Home: React.FC = () => {
+  return (
         <section id='home' className='h-screen flex justify-between flex-col'>
             <header
                 className='flex justify-between py-5 text-h5'
@@ -32,5 +32,5 @@ export const Home = () => {
                 <Chevron />
             </div>
         </section>
-    )
+  )
 }

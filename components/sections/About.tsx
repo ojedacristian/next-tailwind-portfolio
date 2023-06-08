@@ -1,7 +1,7 @@
-import Image from "next/image"
+import Image from 'next/image'
 
-export const About = () => {
-    return (
+export const About: React.FC = () => {
+  return (
         <section id="about" className="h-screen flex items-center py-24">
             <article className="mr-8 w-1/2">
                 <h4 className="uppercase text-h4">A bit about me</h4>
@@ -23,5 +23,5 @@ export const About = () => {
                 </div>
             </div>
         </section>
-    )
+  )
 }

@@ -1,8 +1,7 @@
-import { MailIcon, BehanceIcon, DribbbleIcon, LinkedinIcon } from '../icons';
+import { MailIcon, BehanceIcon, DribbbleIcon, LinkedinIcon } from '../icons'
 
-
-export const Footer = () => {
-    return (
+export const Footer: React.FC = () => {
+  return (
         <section id="footer" className="flex items-center flex-col pt-14 pb-10 h-96 justify-between">
             <div className="text-center">
                 <h3 className="text-h1"> <span className="font-light text-neutral-2">Get</span> in Touch.</h3>
@@ -26,5 +25,5 @@ export const Footer = () => {
                 <p className="font-light text-body text-neutral-2">Made with <span className='text-blue-700'>❣️</span> by <b className="text-neutral-1">Srinivas Dezign</b></p>
             </div>
         </section>
-    )
+  )
 }
