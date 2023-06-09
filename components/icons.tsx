@@ -21,13 +21,13 @@ export const Chevron: React.FC = () => {
 
 export const ChevronRight: React.FC = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width='24' height='24' fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width='24' height='24' fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
   )
 }
 
 export const ArrowRight: React.FC = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width='24' height='24' fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width='24' height='24' fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
   )
 }
 

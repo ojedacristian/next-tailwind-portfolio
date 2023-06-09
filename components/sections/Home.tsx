@@ -1,5 +1,21 @@
 import React from 'react'
 import { Chevron, DezignLogo } from '../icons'
+import { NavButton } from '../NavButton'
+import { type NavButtonProps } from '@/interfaces/interfaces'
+
+const links: NavButtonProps[] = [{
+  title: 'Home',
+  id: 'home'
+},
+{
+  title: 'Work',
+  id: 'works'
+},
+{
+  title: 'About',
+  id: 'about'
+}
+]
 
 export const Home: React.FC = () => {
   return (
@@ -10,17 +26,12 @@ export const Home: React.FC = () => {
                 <DezignLogo />
                 <nav
                     className='flex justify-between w-48'
-                >
-                    <button
-                        className='uppercase text-pink-700 hover:text-pink-700 border-b-pink-700 hover:border-b-2'>
-                        Home
-                    </button>
-                    <button className='uppercase hover:text-pink-700 border-b-pink-700 hover:border-b-2'>
-                        <a href='#works'>
-                        Work
-                        </a>
-                    </button>
-                    <button className='uppercase hover:text-pink-700 border-b-pink-700 hover:border-b-2'>About  </button>
+                    >
+                    {
+                        links.map(({ title, id }: NavButtonProps) => (
+                            <NavButton title={title} id={id} key={title}/>
+                        ))
+                    }
                 </nav>
             </header>
             <div>
