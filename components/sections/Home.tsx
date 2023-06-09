@@ -2,6 +2,7 @@ import React from 'react'
 import { Chevron, DezignLogo } from '../icons'
 import { NavButton } from '../NavButton'
 import { type NavButtonProps } from '@/interfaces/interfaces'
+import { MobileMenu } from '../MobileMenu'
 
 const links: NavButtonProps[] = [{
   title: 'Home',
@@ -25,14 +26,16 @@ export const Home: React.FC = () => {
             >
                 <DezignLogo />
                 <nav
-                    className='flex justify-between w-48'
-                    >
+                    className='hidden
+                        lg:flex justify-between w-48'
+                >
                     {
                         links.map(({ title, id }: NavButtonProps) => (
-                            <NavButton title={title} id={id} key={title}/>
+                            <NavButton title={title} id={id} key={title} />
                         ))
                     }
                 </nav>
+                <MobileMenu/>
             </header>
             <div>
                 <h1
