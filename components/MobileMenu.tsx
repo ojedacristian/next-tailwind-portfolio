@@ -2,17 +2,23 @@
 
 import React from 'react'
 import { DezignLogo } from './icons'
+import { type NavButtonProps } from '@/interfaces/interfaces'
+import { NavButton } from './NavButton'
 
 const toggleMenu = (): void => {
   const menu = document.getElementById('mobilemenu')
   menu?.classList.toggle('hidden')
 }
 
-export const MobileMenu: React.FC = () => {
+interface MobileMenuProps {
+  links: NavButtonProps[]
+}
+
+export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
   return (
         <nav className="relative flex justify-between items-center lg:hidden">
             <div className="">
-                <button className="flex items-center text-neutral-1 p-3" onClick={ toggleMenu }>
+                <button className="flex items-center text-neutral-1 p-3" onClick={toggleMenu}>
                     <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Mobile menu</title>
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -32,21 +38,16 @@ export const MobileMenu: React.FC = () => {
                     </div>
                     <div>
                         <ul>
-                            <li className="mb-1">
-                                <a className="block p-4 text-sm group font-semibold text-neutral-1 hover:text-primary rounded" href="#" onClick={toggleMenu}>Home</a>
-                            </li>
-                            <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-neutral-1 hover:bg-gray-900 hover:text-primary rounded" href="#">About Us</a>
-                            </li>
-                            <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-neutral-1 hover:bg-gray-900 hover:text-primary rounded" href="#">Services</a>
-                            </li>
-                            <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-neutral-1 hover:bg-gray-900 hover:text-primary rounded" href="#">Pricing</a>
-                            </li>
-                            <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-neutral-1 hover:bg-gray-900 hover:text-primary rounded" href="#">Contact</a>
-                            </li>
+                            {
+                                links.map(({ id, title }) => (
+                                    <li className="mb-1" key={title}>
+                                            <NavButton title={title} id={id} className='block p-4 text-sm font-semibold text-neutral-1 hover:bg-gray-900 hover:text-primary rounded'
+                                            fn={toggleMenu}
+                                            />
+                                    </li>
+
+                                ))
+                            }
                         </ul>
                     </div>
                     <div className="mt-auto">

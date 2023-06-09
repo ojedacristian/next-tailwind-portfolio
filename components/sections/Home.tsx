@@ -31,11 +31,13 @@ export const Home: React.FC = () => {
                 >
                     {
                         links.map(({ title, id }: NavButtonProps) => (
-                            <NavButton title={title} id={id} key={title} />
+                            <NavButton title={title} id={id} key={title}
+                                className='uppercase text-neutral-1 hover:text-pink-700 border-b-pink-700 hover:border-b-2'
+                            />
                         ))
                     }
                 </nav>
-                <MobileMenu/>
+                <MobileMenu links={links}/>
             </header>
             <div>
                 <h1

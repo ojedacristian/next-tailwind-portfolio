@@ -8,4 +8,6 @@ export interface Work {
 export interface NavButtonProps {
   title: string
   id: string
+  className?: string
+  fn?: () => void
 }
