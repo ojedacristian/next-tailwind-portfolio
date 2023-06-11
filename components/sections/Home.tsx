@@ -1,21 +1,27 @@
 import React from 'react'
-import { Chevron, DezignLogo } from '../icons'
+import { DezignLogo } from '../icons'
 import { NavButton } from '../NavButton'
 import { type NavButtonProps } from '@/interfaces/interfaces'
 import { MobileMenu } from '../MobileMenu'
+import { ArrowDown } from '../ArrowDown'
 
-const links: NavButtonProps[] = [{
-  title: 'Home',
-  id: 'home'
-},
-{
-  title: 'Work',
-  id: 'works'
-},
-{
-  title: 'About',
-  id: 'about'
-}
+const links: NavButtonProps[] = [
+  {
+    title: 'Home',
+    id: 'home'
+  },
+  {
+    title: 'Work',
+    id: 'works'
+  },
+  {
+    title: 'About',
+    id: 'about'
+  }
+//   {
+//     title: 'Contact',
+//     id: 'contact'
+//   }
 ]
 
 export const Home: React.FC = () => {
@@ -45,7 +51,7 @@ export const Home: React.FC = () => {
                 >I&apos;m a designer specialising in <span className='font-medium text-neutral-1'>UI/UX</span> and <span className='font-medium text-neutral-1'>Interaction Design</span></h1>
             </div>
             <div className='mx-auto mb-10 animate-bounce'>
-                <Chevron />
+                <ArrowDown/>
             </div>
         </section>
   )
