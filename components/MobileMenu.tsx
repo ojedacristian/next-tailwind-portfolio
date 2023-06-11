@@ -45,7 +45,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
                                             fn={toggleMenu}
                                         />
                                     </li>
-
                                 ))
                             }
                         </ul>

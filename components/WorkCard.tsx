@@ -9,9 +9,9 @@ interface WorkCardProps {
 
 export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
   return (
-    <article className={`flex flex-col ${align ? 'md:flex-row-reverse' : 'md:flex-row'} my-14 lg:my-24 text-neutral-2`}>
+    <article className={`flex flex-col ${align ? 'items-end lg:flex-row-reverse' : 'lg:flex-row'} my-14 lg:my-24 text-neutral-2`}>
       <Image className='rounded-3xl' width={594} height={490} src={work.image} alt="" />
-      <div className={`flex flex-col pb-8 ${align ? 'text-right pr-8 items-end' : 'text-left md:pl-8'} md:justify-end md:pb-0`}>
+      <div className={`flex flex-col ${align ? 'text-right pr-8 items-end' : 'text-left md:pl-8'} lg:justify-end pb-0`}>
         <h3 className='uppercase py-4 text-neutral-1 text-h5'>{work.title}</h3>
         <h3 className='text-h3 font-light leading-normal'>Lorem ipsum dolor sit amet, consectetur <b className='text-neutral-1'> adipiscing elit. Ultrices lorem non feugiat egestas amet.</b></h3>
         <p className='my-6 font-light text-body'>{work.category}</p>
