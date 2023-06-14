@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
                 <h3 className="text-h1"> <span className="font-light text-neutral-2">Get</span> in Touch.</h3>
                 <p className="text-neutral-2 text-body font-light">So that we can talk more about...</p>
             </div>
-            <div className='flex justify-between items-center w-96'>
+            <div className='flex justify-between items-center w-5/6 max-w-sm'>
                 <a href="mailto:cristianojeda.maimo@gmail.com">
                     <MailIcon />
                 </a>
