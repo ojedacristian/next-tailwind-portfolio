@@ -1,20 +1,26 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { BehanceIcon, DezignLogo, DribbbleIcon, LinkedinIcon, MailIcon } from './icons'
 import { type NavButtonProps } from '@/interfaces/interfaces'
 import { NavButton } from './NavButton'
-
-const toggleMenu = (): void => {
-  const menu = document.getElementById('mobilemenu')
-  menu?.classList.toggle('hidden')
-}
+import { motion, AnimatePresence } from 'framer-motion'
+// const toggleMenu = (): void => {
+//   const menu = document.getElementById('mobilemenu')
+//   menu?.classList.toggle('hidden')
+// }
 
 interface MobileMenuProps {
   links: NavButtonProps[]
 }
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = (): void => {
+    setIsOpen(state => !state)
+  }
+
   return (
         <nav className="relative flex justify-between items-center lg:hidden">
             <div className="">
@@ -25,9 +31,26 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
                     </svg>
                 </button>
             </div>
-            <div className="navbar-menu relative z-50 hidden" id='mobilemenu' >
+            <AnimatePresence>
+
+            {
+                isOpen &&
+            <div className="navbar-menu relative z-50" id='mobilemenu' >
                 <div className="navbar-backdrop fixed inset-0 bg-black opacity-25" onClick={toggleMenu}></div>
-                <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-neutral-950 border-r border-neutral-700 overflow-y-auto">
+                <motion.nav
+                    initial={{
+                      x: '-100%'
+                    }}
+                    animate={{
+                      x: 0
+                    }}
+                    exit={{
+                      x: '-100%'
+                    }}
+                    transition={{
+                      ease: 'anticipate'
+                    }}
+                className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-neutral-950 border-r border-neutral-700 overflow-y-auto">
                     <div className="flex items-center justify-between mb-8">
                         <DezignLogo />
                         <button className="navbar-close" onClick={toggleMenu}>
@@ -68,8 +91,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
                             <span>Copyright © 2023</span>
                         </p>
                     </div>
-                </nav>
+                </motion.nav>
             </div>
+
+            }
+                        </AnimatePresence>
+
         </nav>
   )
 }
