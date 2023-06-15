@@ -4,7 +4,7 @@ import { type Work } from '@/interfaces/interfaces'
 import Image from 'next/image'
 import { ArrowRight, ChevronRight } from './icons'
 import { motion } from 'framer-motion'
-import { useRef } from 'react'
+// import { useRef } from 'react'
 
 interface WorkCardProps {
   align: boolean
@@ -17,14 +17,15 @@ const variant = {
     opacity: 1,
     x: 0,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2
+      delayChildren: 0.5,
+      staggerChildren: 0.3,
+      duration: 0.5
     }
   }
 }
 const item = {
   hidden: { opacity: 0, y: 100 },
-  show: { opacity: 1, y: 0 }
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
 }
 
 export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
@@ -34,8 +35,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
       initial='hidden'
       whileInView='show'
       viewport={{
-        // amount: 0.7,
-        amount: 'all',
+        amount: 0.6,
         once: true
       }}
       className={`flex flex-col ${align ? 'items-end lg:flex-row-reverse' : 'lg:flex-row'} my-14 lg:my-24 text-neutral-2`}>
