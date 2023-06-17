@@ -12,20 +12,20 @@ interface WorkCardProps {
 }
 
 const variant = {
-  hidden: { opacity: 0, x: -100 },
+  hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
-      delayChildren: 0.5,
+      delayChildren: 0.7,
       staggerChildren: 0.3,
-      duration: 0.5
+      duration: 1
     }
   }
 }
 const item = {
-  hidden: { opacity: 0, y: 100 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.3 } }
 }
 
 export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
@@ -44,8 +44,10 @@ export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
         <motion.h3 variants={item} className='uppercase py-4 text-neutral-1 text-h5'>{work.title}</motion.h3>
         <motion.h3 variants={item} className='text-h3 font-light leading-normal'>Lorem ipsum dolor sit amet, consectetur <b className='text-neutral-1'> adipiscing elit. Ultrices lorem non feugiat egestas amet.</b></motion.h3>
         <motion.p variants={item} className='my-6 font-light text-body'>{work.category}</motion.p>
-        <button
-        className={`group uppercase flex justify-center p-2 rounded-full w-44 border text-neutral-1 border-neutral-2 text-h5 hover:bg-gradient-to-tl from-purple-600 to-pink-600 transition-all hover:scale-110 ${align ? 'hover:-translate-x-3' : 'hover:translate-x-3'} hover:border-white`}>
+        <motion.button
+        variants={item}
+        className={`group uppercase flex justify-center p-2 rounded-full w-44 border text-neutral-1 border-neutral-2 text-h5 hover:bg-gradient-to-tl from-purple-600 to-pink-600 ${align ? 'hover:-translate-x-3' : 'hover:translate-x-3'} hover:border-white`}
+        >
           View Work
           <div className="collapse group-hover:visible">
             <ArrowRight />
@@ -53,7 +55,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
           <div className="group-hover:collapse">
             <ChevronRight />
           </div>
-        </button>
+        </motion.button>
       </div>
     </motion.article>
   )
