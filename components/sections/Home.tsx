@@ -1,11 +1,8 @@
 'use client'
 import React from 'react'
-import { DezignLogo } from '../icons'
-import { NavButton } from '../NavButton'
-import { type NavButtonProps } from '@/interfaces/interfaces'
-import { MobileMenu } from '../MobileMenu'
-import { ArrowDown } from '../ArrowDown'
 import { motion } from 'framer-motion'
+import { type NavButtonProps } from '@/interfaces/interfaces'
+import { ArrowDown, MobileMenu, DezignLogo, NavButton, homeVariant, homeVariantItem } from '../'
 
 const links: NavButtonProps[] = [
   {
@@ -20,27 +17,35 @@ const links: NavButtonProps[] = [
     title: 'About',
     id: 'about'
   }
-  //   {
-  //     title: 'Contact',
-  //     id: 'contact'
-  //   }
+]
+
+const linksMobileMenu: NavButtonProps[] = [
+  ...links,
+  {
+    title: 'Clients',
+    id: 'clients'
+  }
 ]
 
 export const Home: React.FC = () => {
   return (
-        <section id='home' className='h-screen flex justify-between flex-col'>
+        <motion.section
+        variants={homeVariant}
+        initial='hidden'
+        animate='show'
+        id='home' className='h-screen flex justify-between flex-col'>
             <header
                 className='flex justify-between py-5 text-h5'
             >
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    variants={homeVariantItem}
+                    custom={0}
                 >
                     <DezignLogo />
                 </motion.div>
                 <motion.nav
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+                    variants={homeVariantItem}
+                    custom={1}
                     className='hidden
                         lg:flex justify-between w-48'
                 >
@@ -52,18 +57,21 @@ export const Home: React.FC = () => {
                         ))
                     }
                 </motion.nav>
-                <MobileMenu links={links} />
+                <MobileMenu links={linksMobileMenu} />
             </header>
             <div>
                 <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.8 } }}
+                variants={homeVariantItem}
+                custom={2.8}
                     className='text-h1 font-light text-neutral-2 text-center leading-tight'
                 >I&apos;m a designer specialising in <span className='font-medium text-neutral-1'>UI/UX</span> and <span className='font-medium text-neutral-1'>Interaction Design</span></motion.h1>
             </div>
-            <div className='mx-auto mb-10 animate-bounce'>
+            <motion.div
+                variants={homeVariantItem}
+                custom={7}
+                className='mx-auto mb-10 animate-bounce'>
                 <ArrowDown />
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
   )
 }
