@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import { motion } from 'framer-motion'
 import { type NavButtonProps } from '@/interfaces/interfaces'
 import { ArrowDown, MobileMenu, DezignLogo, NavButton, customVariant, customVariantItem } from '../'

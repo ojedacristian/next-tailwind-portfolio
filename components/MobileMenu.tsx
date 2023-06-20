@@ -45,13 +45,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = (): void => {
+    window.document.body.classList.remove('overflow-hidden')
     setIsOpen(state => !state)
   }
 
   return (
         <nav className="relative flex justify-between items-center lg:hidden">
             <div className="">
-                <button className="flex items-center text-neutral-1 p-3" onClick={() => { setIsOpen(true) }}>
+                <button className="flex items-center text-neutral-1 p-3" onClick={() => {
+                  setIsOpen(true)
+                  window.document.body.classList.add('overflow-hidden')
+                }}>
                     <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Mobile menu</title>
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -63,7 +67,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
                 {
                     isOpen &&
                     <div className="navbar-menu relative z-50" id='mobilemenu' >
-                        <div className="navbar-backdrop fixed inset-0 bg-black opacity-25" onClick={() => { setIsOpen(false) }} ></div>
+                        <div className="navbar-backdrop fixed inset-0 bg-black opacity-25" onClick={() => {
+                          window.document.body.classList.remove('overflow-hidden')
+                          setIsOpen(false)
+                        }} ></div>
                         <motion.nav
                         initial='hidden'
                         animate='show'
@@ -75,7 +82,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
                                 <motion.button
                                     whileHover={{ rotate: 180, scale: 1.2 }}
                                     whileTap={{ scale: 0.8 }}
-                                className="navbar-close" onClick={() => { setIsOpen(false) }}>
+                                className="navbar-close" onClick={() => {
+                                  window.document.body.classList.remove('overflow-hidden')
+                                  setIsOpen(false)
+                                }}>
                                     <svg className="h-6 w-6 text-neutral-2 cursor-pointer hover:text-neutral-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                                     </svg>
