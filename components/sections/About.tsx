@@ -42,7 +42,7 @@ export const About: React.FC = () => {
                   amount: 0.7,
                   once: true
                 }}
-                className="sm:w-1/2 grid sm:grid-cols-1 md:grid-cols-2 grid-rows-4 gap-8 collapse sm:visible"
+                className="sm:w-1/2 grid sm:grid-cols-1 md:grid-cols-2 grid-rows-4 gap-8 collapse sm:visible overflow-hidden"
             >
                 <motion.div variants={item} className="col-start-2 row-start-1 row-end-3">
                     <Image className='rounded-xl' width={282} height={408} src='https://picsum.photos/id/49/282/408' alt="" />

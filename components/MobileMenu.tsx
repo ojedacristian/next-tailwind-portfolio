@@ -24,6 +24,7 @@ const navVariant = {
     x: 0,
     opacity: 1,
     transition: {
+      ease: 'easeOut',
       delayChildren: 0.2,
       staggerChildren: 0.1
     }
