@@ -9,14 +9,18 @@ const containerVariant = {
     opacity: 1,
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 0.2
+      staggerChildren: 0.3
     }
   }
 }
 
 const itemVariant = {
   hidden: { opacity: 0, y: 100 },
-  show: { opacity: 1, y: 0 }
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 }
+  }
 }
 const transitionHover = {
   type: 'spring',

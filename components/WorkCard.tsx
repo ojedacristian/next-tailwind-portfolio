@@ -46,6 +46,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
         <motion.p variants={item} className='my-6 font-light text-body'>{work.category}</motion.p>
         <motion.button
         variants={item}
+        whileHover={{ scale: 1.1 }}
         className={`group uppercase flex justify-center p-2 rounded-full w-44 border text-neutral-1 border-neutral-2 text-h5 hover:bg-gradient-to-tl from-purple-600 to-pink-600 ${align ? 'hover:-translate-x-3' : 'hover:translate-x-3'} hover:border-white`}
         >
           View Work
