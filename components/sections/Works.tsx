@@ -4,25 +4,25 @@ import { WorkCard } from '../../components'
 const works: Work[] = [
   {
     title: 'Real Estate Template',
-    image: 'https://picsum.photos/600/500',
+    image: '/work1.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
     category: 'Website Design'
   },
   {
     title: 'Plant Identification App',
-    image: 'https://picsum.photos/id/82/600/500',
+    image: '/work2.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
     category: 'Mobile App'
   },
   {
     title: 'Smart Home App',
-    image: 'https://picsum.photos/id/60/600/500',
+    image: '/work3.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
     category: 'Mobile App'
   },
   {
     title: 'Logo Animation',
-    image: 'https://picsum.photos/id/63/600/500',
+    image: '/work4.jpg',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lorem non feugiat egestas amet.',
     category: 'Animation'
   }
