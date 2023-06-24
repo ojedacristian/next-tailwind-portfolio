@@ -5,6 +5,7 @@ import { BehanceIcon, DezignLogo, DribbbleIcon, LinkedinIcon, MailIcon } from '.
 import { type NavButtonProps } from '@/interfaces/interfaces'
 import { NavButton } from './NavButton'
 import { motion, AnimatePresence } from 'framer-motion'
+import { customVariantItem } from './animations'
 
 interface MobileMenuProps {
   links: NavButtonProps[]
@@ -54,25 +55,24 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
   return (
     <nav className="relative flex justify-between items-center lg:hidden">
       <div className="">
-        <button className="flex items-center text-neutral-1 p-3" onClick={() => {
+        <motion.button
+        variants={customVariantItem}
+        custom={1}
+        className="flex items-center text-neutral-1 p-3 group hover:bg-white rounded-full" onClick={() => {
           setIsOpen(true)
           window.document.body.classList.add('overflow-hidden')
         }}>
-          <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <svg className="block h-4 w-4 fill-current group-hover:fill-gray-900" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Mobile menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
           </svg>
-        </button>
+        </motion.button>
       </div>
       <AnimatePresence>
 
         {
           isOpen &&
           <div className="navbar-menu relative z-50" id='mobilemenu' >
-            <div className="navbar-backdrop fixed inset-0 bg-black opacity-25" onClick={() => {
-              window.document.body.classList.remove('overflow-hidden')
-              setIsOpen(false)
-            }} ></div>
             <motion.nav
               initial='hidden'
               animate='show'
