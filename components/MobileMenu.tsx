@@ -106,23 +106,28 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
                   ))
                 }
               </ul>
-              <div className="mt-auto">
+              <motion.div
+              variants={navVariant}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+              className="mt-auto">
                 <div className='flex justify-around items-center px-8 w-1/2 mx-auto mb-4'>
-                  <a href="mailto:cristianojeda.maimo@gmail.com">
+                  <motion.a variants={navVariantItem} href="mailto:cristianojeda.maimo@gmail.com">
                     <MailIcon />
-                  </a>
-                  <a href="https://behance.net" target='_blank'>
+                  </motion.a>
+                  <motion.a variants={navVariantItem} href="https://behance.net" target='_blank'>
                     <BehanceIcon />
-                  </a>
-                  <a href="https://dribbble.com" target='_blank'>
+                  </motion.a>
+                  <motion.a variants={navVariantItem} href="https://dribbble.com" target='_blank'>
                     <DribbbleIcon />
-                  </a>
-                  <a href="https://linkedin.com" target='_blank'>
+                  </motion.a>
+                  <motion.a variants={navVariantItem} href="https://linkedin.com" target='_blank'>
                     <LinkedinIcon />
-                  </a>
+                  </motion.a>
                 </div>
 
-              </div>
+              </motion.div>
             </motion.nav>
           </div>
 
