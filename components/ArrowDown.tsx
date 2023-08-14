@@ -1,7 +1,7 @@
 'use client'
 import { Chevron } from './icons'
 
-export const ArrowDown = () => {
+export const ArrowDown: React.FC = () => {
   return (
     <button onClick={() => {
       const clients = document.getElementById('clients')
