@@ -78,7 +78,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
               animate='show'
               exit='hidden'
               variants={navVariant}
-              className="fixed top-0 left-0 bottom-0 flex flex-col w-full py-6 px-6 bg-neutral-950 border-r border-neutral-700 overflow-y-auto">
+              className="fixed top-0 left-0 bottom-0 flex flex-col w-full py-6 px-6 bg-neutral-950 border-r border-neutral-700 overflow-y-hidden">
               <div className="flex items-center justify-between mb-8">
                 <DezignLogo />
                 <motion.button
