@@ -31,7 +31,10 @@ export const Footer: React.FC = () => {
             variants={customVariantItem}
             custom={4}
             >
-                <p className="font-light text-body text-neutral-2">Made with <span className='text-blue-700'>❣️</span> by <b className="text-neutral-1">Srinivas Dezign</b></p>
+                <p className="font-light text-body text-neutral-2 text-center">
+                    Designed by <b className="text-neutral-1"><a href="https://www.figma.com/community/file/1107859971007623263/Portfolio">Srinivas Dezign</a></b> <br />
+                    Developed by <a href="https://cristianojeda.com.ar" target='_blank' className='text-neutral-1 font-bold'>Cristian Ojeda</a>
+                </p>
             </motion.div>
         </motion.section>
   )

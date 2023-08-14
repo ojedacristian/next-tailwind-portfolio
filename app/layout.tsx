@@ -1,3 +1,4 @@
+import { type Metadata } from 'next'
 import './globals.css'
 import { Work_Sans } from 'next/font/google'
 
@@ -6,9 +7,10 @@ const workSans = Work_Sans({
   subsets: ['latin']
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Portfolio Open Source - Cristian Ojeda',
-  description: 'Developer Portfolio designed by Srinivas Dezign and Developed by Cristian Ojeda'
+  description: 'Developer Portfolio open source designed by Srinivas Dezign and Developed by Cristian Ojeda',
+  keywords: 'Developer, Frontend, Cristian Ojeda, Next, React, Development'
 }
 
 export default function RootLayout ({ children }: { children: React.ReactNode }): JSX.Element {
