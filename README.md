@@ -3,6 +3,8 @@
 <img src='https://raw.githubusercontent.com/ojedacristian/next-tailwind-portfolio/master/public/portfoliofree.webp' alt='Portfolio libre de uso' />
 Portfolio construido con NextJS, TailwindCSS y Framer Motion. Libre de uso.
 
+## Ver proyecto
+**[Clic para ver el Portfolio](https://free-next-portfolio.netlify.app/)** 🚀
 
 ## ¿Cómo usarlo?
 
@@ -34,8 +36,10 @@ Para más detalles, la documentación de implementación de Next.js (https://nex
 
 ## Autor 👨‍💻
 
-- **Cristian Ojeda** - **[Linkedin](https://linkedin.com/in/ojedacristian)**, **[Github](https://github.com/ojedacristian)**, **[Portfolio](https://cristianojeda.com.ar)**  
+- **Cristian Ojeda** - **[Linkedin](https://linkedin.com/in/ojedacristian)**, **[Github](https://github.com/ojedacristian)**, **[Portfolio](https://cristianojeda.com.ar)**
+
+- Diseñado por ** Srinivas Dezign ** **[Figma](https://www.figma.com/@srinivas_dezign)**
 
 ## Licencia 📄
 
-This project is licensed under the  **CC BY 4.0** License - see the **[LICENSE](https://creativecommons.org/licenses/by/4.0/)** file for details
+Este proyecto está licenciado bajo la licencia  **CC BY 4.0** - ver la **[Licencia](https://creativecommons.org/licenses/by/4.0/)** para más detalles.
