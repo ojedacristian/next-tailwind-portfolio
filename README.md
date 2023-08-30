@@ -30,15 +30,15 @@ Abrir [http://localhost:3000](http://localhost:3000) con tu navegador para ver e
 
 ## Despliegue en Vercel
 
-La forma más fácil de desplegar el sitio es usar la Plataforma de Vercel (https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app -readme) de los propios creadores de Next.js.
+La forma más fácil de desplegar el sitio es usar la Plataforma de **[Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app)** de los propios creadores de Next.js.
 
-Para más detalles, la documentación de implementación de Next.js (https://nextjs.org/docs/deployment).
+Para más detalles, la documentación de implementación de Next.js (**[Deployment](https://nextjs.org/docs/deployment)**).
 
 ## Autor 👨‍💻
 
 - **Cristian Ojeda** - **[Linkedin](https://linkedin.com/in/ojedacristian)**, **[Github](https://github.com/ojedacristian)**, **[Portfolio](https://cristianojeda.com.ar)**
 
-- Diseñado por ** Srinivas Dezign ** **[Figma](https://www.figma.com/@srinivas_dezign)**
+- Diseñado por **Srinivas Dezign** **[Figma](https://www.figma.com/@srinivas_dezign)**
 
 ## Licencia 📄
 

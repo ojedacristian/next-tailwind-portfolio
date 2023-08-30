@@ -17,15 +17,15 @@ const variant = {
     opacity: 1,
     y: 0,
     transition: {
-      delayChildren: 0.7,
-      staggerChildren: 0.3,
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
       duration: 1
     }
   }
 }
 const item = {
   hidden: { opacity: 0, y: 50 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeInOut' } }
 }
 
 export const WorkCard: React.FC<WorkCardProps> = ({ align, work }) => {
