@@ -51,7 +51,7 @@ export const About: React.FC = () => {
                     <Image className='rounded-xl' aria-label='Related Image' width={423} height={600} src='https://picsum.photos/id/59/282/408' alt="Image about me" />
                 </motion.div>
                 <motion.div variants={item} className="col-start-2 row-start-3 row-end-5">
-                    <Image className='rounded-xl' aria-label='Related Image'  width={423} height={600} src='https://picsum.photos/id/69/282/408' alt="Image about me" />
+                    <Image className='rounded-xl' aria-label='Related Image' width={423} height={600} src='https://picsum.photos/id/69/282/408' alt="Image about me" />
                 </motion.div>
             </motion.div>
         </section>
